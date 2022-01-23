@@ -9,10 +9,7 @@ const galleryEl = document.querySelector(".gallery")
 const searchBtm = document.querySelector(".submit");
 const loadMoreBtm = document.querySelector(".load-more")
 
-
 loadMoreBtm.hidden = true;
-
-
 
 searchBtm.addEventListener("click", onBtnClick);
 loadMoreBtm.addEventListener("click", onMorePicClick)
