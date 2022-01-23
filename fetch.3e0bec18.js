@@ -63,4 +63,4 @@ module.exports=require("./lib/axios");
 },{"./lib/axios":"nUiQ"}],"spyz":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.getPictures=o,exports.getMorePictures=p,exports.toDefaultPageValue=s;const e=require("axios").default,a=document.querySelector("input"),t="https://pixabay.com/api/",r={params:{key:"25358610-6c58710bcb07b0c67b61215e4",q:"",image_type:"photo",orientation:"horizontal",safesearch:!0,page:1,per_page:40}};async function o(){try{const p=a.value;return r.params.q=p,await e(t,r)}catch(o){console.log(o)}}function p(){return r.params.page+=1,r.params.page*r.params.per_page}function s(){r.params.page=1}
 },{"axios":"dZBD"}]},{},["spyz"], null)
-//# sourceMappingURL=/goit-js-hw-11/fetch.5648580a.js.map
+//# sourceMappingURL=/goit-js-hw-11/fetch.3e0bec18.js.map
