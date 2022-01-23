@@ -18,7 +18,7 @@ loadMoreBtm.addEventListener("click", onMorePicClick)
      e.preventDefault()
      
      galleryEl.innerHTML = " ";
-
+// 1
     getPictures().then(async result => {
         if (result.data.hits.length !== 0) {
 
