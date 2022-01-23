@@ -2,7 +2,7 @@ import { getPictures } from "./fetch";
 import cardTemplate from "../template/card_temp.hbs"
 import Notiflix from 'notiflix';
 import { getMorePictures } from "./fetch";
-import { pageCount } from "./creating_cards"
+import { toDefaultPageValue } from "./fetch";
 
 
 const galleryEl = document.querySelector(".gallery")
@@ -18,13 +18,14 @@ loadMoreBtm.addEventListener("click", onMorePicClick)
      e.preventDefault()
      
      galleryEl.innerHTML = " ";
+     toDefaultPageValue()
 // 1
-    getPictures().then(async result => {
+    getPictures().then(result => {
         if (result.data.hits.length !== 0) {
 
         const objMassive = result.data.hits;
        
-        const cards = await objMassive.map(obj => {
+        const cards = objMassive.map(obj => {
             
             return cardTemplate(obj)
         }) 
@@ -45,11 +46,11 @@ function onMorePicClick(e) {
     const resultSum = getMorePictures();
 
 
-    getPictures().then(async result => {
+    getPictures().then(result => {
         if (resultSum < result.data.totalHits) {
              const objMassive = result.data.hits;
        
-            const cards = await objMassive.map(obj => {
+            const cards = objMassive.map(obj => {
             
                 return cardTemplate(obj)
             })

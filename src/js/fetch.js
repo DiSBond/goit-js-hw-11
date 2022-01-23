@@ -16,11 +16,15 @@ const options = {
 };
 
 export async function getPictures() {
-    try {
-      options.params.q = inputEl.value;
+  try {
 
-      const response = await axios(BASE_URL, options);
-         return response;
+      const paramsCount = inputEl.value;
+    
+      options.params.q = paramsCount;
+    
+    const response = await axios(BASE_URL, options);
+    return response;
+    
     } catch (error) {
         console.log(error);
     }
@@ -31,4 +35,8 @@ export function getMorePictures() {
   const pageCount = options.params.page * options.params.per_page;
 
   return pageCount
+  }
+
+ export function toDefaultPageValue() {
+    options.params.page = 1;
   }
