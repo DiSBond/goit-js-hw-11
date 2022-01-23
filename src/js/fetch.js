@@ -29,7 +29,7 @@ export async function getPictures() {
         console.log(error);
     }
   }
-
+// 1
 export function getMorePictures() {
   options.params.page += 1;
   const pageCount = options.params.page * options.params.per_page;
