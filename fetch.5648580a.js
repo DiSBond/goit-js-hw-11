@@ -61,6 +61,6 @@ module.exports={version:"0.25.0"};
 },{"./utils":"S1cf","./helpers/bind":"EDTP","./core/Axios":"OvAf","./core/mergeConfig":"OHvn","./defaults":"BXyq","./cancel/Cancel":"mIKj","./cancel/CancelToken":"tsWd","./cancel/isCancel":"V30M","./env/data":"xNqU","./helpers/spread":"X8jb","./helpers/isAxiosError":"wICU"}],"dZBD":[function(require,module,exports) {
 module.exports=require("./lib/axios");
 },{"./lib/axios":"nUiQ"}],"spyz":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.getPictures=o,exports.getMorePictures=p;const e=require("axios").default,a=document.querySelector("input"),t="https://pixabay.com/api/",r={params:{key:"25358610-6c58710bcb07b0c67b61215e4",q:"",image_type:"photo",orientation:"horizontal",safesearch:!0,page:1,per_page:40}};async function o(){try{return r.params.q=a.value,await e(t,r)}catch(o){console.log(o)}}function p(){return r.params.page+=1,r.params.page*r.params.per_page}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.getPictures=o,exports.getMorePictures=p,exports.toDefaultPageValue=s;const e=require("axios").default,a=document.querySelector("input"),t="https://pixabay.com/api/",r={params:{key:"25358610-6c58710bcb07b0c67b61215e4",q:"",image_type:"photo",orientation:"horizontal",safesearch:!0,page:1,per_page:40}};async function o(){try{const p=a.value;return r.params.q=p,await e(t,r)}catch(o){console.log(o)}}function p(){return r.params.page+=1,r.params.page*r.params.per_page}function s(){r.params.page=1}
 },{"axios":"dZBD"}]},{},["spyz"], null)
-//# sourceMappingURL=/goit-js-hw-11/fetch.b195dd92.js.map
+//# sourceMappingURL=/goit-js-hw-11/fetch.5648580a.js.map
